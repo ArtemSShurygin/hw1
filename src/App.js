@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+
+//import Message from "./Message";
 
 function App() {
+	return (
+		<div className="App">
+			<Message num="1" text="Message text 1" />
+			<Message num="2" text="Message text 2" />
+		</div>
+	);
+}
+
+function Message({num, text}) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <p>Message {num}: {text}</p>
     </div>
-  );
+  )
 }
 
 export default App;
